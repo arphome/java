@@ -1,3 +1,4 @@
+
 import java.util.Scanner;
 
 /* class for battleship game initializes basic variables to start game */
@@ -102,9 +103,11 @@ public class BattleShipGame {
 	  public void winner() {
 		  if (scorePlayer1 >= 17) {
 			  System.out.println("PLAYER 1 WINS!");
+        return;
 		  }
 		  else if (scorePlayer2 >= 17) {
 			  System.out.println("PLAYER 2 WINS!");
+        return;
 		  }
 	  }
   
@@ -166,6 +169,14 @@ public class BattleShipGame {
 		      }
 		      System.out.println();
 		  }
+      if (scorePlayer1 >= 17) {
+			  System.out.println("PLAYER 1 WINS!");
+        return;
+		  }
+		  else if (scorePlayer2 >= 17) {
+			  System.out.println("PLAYER 2 WINS!");
+        return;
+		  }
       /* changes turn to player 1 */
   		  player1();
   		  return;
@@ -189,7 +200,6 @@ public class BattleShipGame {
   		while (inputY > 20 || inputY < 0) {
   			System.out.println("Enter x position of enemy ship again, it's out of map");
   	  		inputY =  myObjInt.nextInt();
-  			
   		}
   		while (inputX > 20 || inputX < 0) {
   			System.out.println("Enter y position of enemy ship again, it's out of map");
@@ -212,7 +222,7 @@ public class BattleShipGame {
 		}
 		  else {
 			  System.out.println(gameSize1[inputX][inputY + 1]);
-			  scorePlayer2++;
+			  scorePlayer1++;
 			  actualGame[inputX][inputY + 1] = "HIT";
 		  	  winner();
             
@@ -229,6 +239,14 @@ public class BattleShipGame {
 		        }
 		      }
 		      System.out.println();
+		  }
+      if (scorePlayer1 >= 1) {
+			  System.out.println("PLAYER 1 WINS!");
+        return;
+		  }
+		  else if (scorePlayer2 >= 17) {
+			  System.out.println("PLAYER 2 WINS!");
+        return;
 		  }
       /* changes turn to player 2 */
   		  player2();
