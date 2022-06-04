@@ -240,7 +240,7 @@ public class BattleShipGame {
 		      }
 		      System.out.println();
 		  }
-      if (scorePlayer1 >= 1) {
+      if (scorePlayer1 >= 17) {
 			  System.out.println("PLAYER 1 WINS!");
         return;
 		  }
